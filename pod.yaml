@@ -2,8 +2,6 @@ apiVersion: v1
 kind: Pod
 metadata:
  name: nmap
- annotations:
-   io.kubernetes.cri-o.Devices: "/dev/fuse"
 spec:
   containers:
   - name: nmap
