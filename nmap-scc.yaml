@@ -1,0 +1,18 @@
+apiVersion: security.openshift.io/v1
+kind: SecurityContextConstraints
+metadata:
+  name: nmap-scc
+priority: null
+allowPrivilegeEscalation: true
+allowedCapabilities:
+- CAP_NET_RAW
+- CAP_NET_ADMIN
+- CAP_NET_BIND_SERVICE
+fsGroup:
+  type: MustRunAs
+runAsUser:
+  type: MustRunAsRange
+seLinuxContext:
+  type: MustRunAs
+supplementalGroups:
+  type: RunAsAny
