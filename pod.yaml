@@ -7,7 +7,6 @@ spec:
   - name: nmap
     image: quay.io/cgruver0/nmap-ubi9:latest
     securityContext:
-      allowPrivilegeEscalation: true
       capabilities:
         add:
         - CAP_NET_RAW
